@@ -1,4 +1,4 @@
-export default function Title() {
+export default function Title(props) {
     return (
         <>
             <div className="grid"></div>
@@ -7,6 +7,7 @@ export default function Title() {
             <span>ALEXI</span>
             <span>ALEXI</span>
             </h1>
+            <h2>{props.title}</h2>
         </>
     )
 };

@@ -1,6 +1,8 @@
-import Pizza from './Pizza'
-// import PizzaPic from '../assets/images/pizza.PNG';
+import Pizza from './Pizza';
 import Navbar from './Navbar';
+import About from './About';
+import Crypto from './Crypto';
+import MessageBoard from './MessageBoard';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,9 +16,9 @@ export default function Main() {
         <Navbar />
         <Switch>
             <Route path="/" exact component={Pizza} />
-            <Route path="/about" exact component={Pizza} />
-            <Route path="/crypto" exact component={Pizza} />
-            <Route path="/contact" exact component={Pizza} />
+            <Route path="/about" exact component={About} />
+            <Route path="/crypto" exact component={Crypto} />
+            <Route path="/message-board" exact component={MessageBoard} />
         </Switch>
       </Router>
     </div>

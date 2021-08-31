@@ -23,8 +23,8 @@ const Navbar = () => {
                     <NavLink to="/crypto" activeStyle>
                         Crypto
                     </NavLink>
-                    <NavLink to="/contact" activeStyle>
-                        Contact Me
+                    <NavLink to="/message-board" activeStyle>
+                        Message Board
                     </NavLink>
                 </NavMenu>
             </Nav>

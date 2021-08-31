@@ -2,8 +2,7 @@ import Title from './Title';
 export default function Pizza() {
     return (
         <div>
-            <Title />
-            <h2>Pizza</h2>
+            <Title title="Pizza" />
             <div className="container">
                 <div className="crust">
                     <div className="pep"></div>
