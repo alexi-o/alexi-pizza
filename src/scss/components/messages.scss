@@ -1,0 +1,37 @@
+.message-board {
+    width: 75%;
+    margin: 2em auto;
+    text-align: left;
+        .message {
+            padding: 10px 20px;
+            list-style: none;
+            border: 1px solid $font;
+            border-radius: 10px;
+            color: $font;
+            margin-bottom: 1em;
+            width: auto;
+            background: #000;
+        }
+}
+
+.message-submit {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    input, &:focus-visible {
+        width: 60%;
+        padding: 20px 20px;
+        border-radius: 10px 0 0 10px;
+        background: #000;
+        border: 1px solid $font;
+        color: #fff;
+        border: 1px solid #fe05e1;
+    }
+    button, &:focus-visible {
+        background: #fe05e1;
+        padding: 20px 20px;
+        border-radius: 0 10px 10px 0px;
+        border: 1px solid #fe05e1;
+        color: #fff;
+    }
+}
