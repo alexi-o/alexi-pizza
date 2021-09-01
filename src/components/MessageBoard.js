@@ -1,4 +1,10 @@
 import Title from './Title';
+import useInput from './useInput';
+import getFirebase from '../firebase';
+import {useState, useEffect} from 'react';
+import moment from 'moment';
+
+const firebase = getFirebase();
 
 export default function MessageBoard(){
     const message = useInput("");
@@ -52,6 +58,22 @@ export default function MessageBoard(){
 
 
     return (
+      <>
         <Title title="Message Board"/>
+        <div className="message-board">
+          <div className="messages">
+            {
+              messages.map((item, index) => {
+                return <li className="message" key={index}>{item}</li>
+              })
+            }
+          </div>
+          <form className="message-submit" onSubmit={submitForm}>
+            <title>Submit your message below</title>
+            <input placeholder="Message" {...message} />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </>
     )
 };
