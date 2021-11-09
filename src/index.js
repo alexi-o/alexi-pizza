@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql} from '@apollo/client';
+import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 import {RestLink} from 'apollo-link-rest';
 
 const restLink = new RestLink({
-  uri: 'https://api.coingecko.com/api/v3/'
+  endpoints: {
+    trending: 'https://api.coingecko.com/api/v3/'
+  }
 });
 
 const client = new ApolloClient({
